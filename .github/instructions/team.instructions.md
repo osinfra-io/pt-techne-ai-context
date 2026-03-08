@@ -1,6 +1,7 @@
 ---
 applyTo: "**/pt-techne-*/**"
 ---
+
 # Techne Team Instructions
 
 ## Repository Overview
@@ -10,6 +11,13 @@ applyTo: "**/pt-techne-*/**"
 - **`pt-techne-misc-workflows`** — Reusable called workflows for common automation (build-and-push, Dependabot, Nuclei)
 - **`pt-techne-opentofu-codespace`** — GitHub Codespace configuration for standardized IaC developer environments
 
-## Conventions
+### Creating Releases
 
-- When modifying reusable workflows or hooks, create a new version tag after merging. Consumer repos must then update their SHA references to the new tag.
+Tags follow [Semantic Versioning](https://semver.org/): `MAJOR.MINOR.PATCH` — increment MAJOR for breaking changes, MINOR for backwards-compatible additions, PATCH for backwards-compatible fixes.
+
+To release a new version, simply push a new tag to the repository. The tag should be in the format `vX.Y.Z` where `X`, `Y`, and `Z` are integers.
+
+```none
+git tag vX.Y.Z
+git push origin vX.Y.Z
+```
