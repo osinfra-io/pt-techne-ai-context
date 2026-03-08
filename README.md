@@ -6,7 +6,7 @@ Techne team-level Copilot instructions for the [osinfra-io](https://github.com/o
 
 This repository is the **techne team level** of a three-level GitHub Copilot instruction hierarchy. Instructions here apply to all `pt-techne-*` repositories.
 
-```
+```none
 Platform   pt-ai-context                   ← universal conventions for all pt-* repos
   └── Team   pt-techne-ai-context          ← this repo (applies to all pt-techne-* repos)
         └── Repo   .github/copilot-instructions.md   ← in every repo (repo-specific only)
