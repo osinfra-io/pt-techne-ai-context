@@ -12,10 +12,6 @@ Platform   pt-ai-context                   ← universal conventions for all pt-
         └── Repo   .github/copilot-instructions.md   ← in every repo (repo-specific only)
 ```
 
-## What's in this repo
-
-`.github/instructions/team.instructions.md` — loaded via `COPILOT_CUSTOM_INSTRUCTIONS_DIRS`. Contains conventions shared across all techne repositories (reusable workflows, pre-commit hooks, codespace definition).
-
 ## Setup
 
 Add this repo alongside [pt-ai-context](https://github.com/osinfra-io/pt-ai-context) in your `COPILOT_CUSTOM_INSTRUCTIONS_DIRS`:
