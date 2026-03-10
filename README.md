@@ -14,7 +14,14 @@ Platform   pt-ai-context                   ← universal conventions for all pt-
 
 ## What's in this repo
 
-`.github/instructions/team.instructions.md` — loaded via `COPILOT_CUSTOM_INSTRUCTIONS_DIRS`. Contains conventions shared across all techne repositories (reusable workflows, pre-commit hooks, codespace definition).
+`.github/instructions/team.instructions.md` — loaded via `COPILOT_CUSTOM_INSTRUCTIONS_DIRS`. Contains conventions shared across all techne repositories:
+
+- Reusable GitHub Actions called workflows for OpenTofu + GCP deployments (`pt-techne-opentofu-workflows`)
+- Pre-commit hooks for IaC validation (`pt-techne-pre-commit-hooks`)
+- Common automation workflows: build-and-push, Dependabot, Nuclei, release (`pt-techne-misc-workflows`)
+- GitHub Codespace for standardized IaC development (`pt-techne-opentofu-codespace`)
+- All GitHub Actions must use full 40-character commit SHAs with inline version comments
+- When modifying workflows, update the Mermaid diagram in `README.md`
 
 ## Setup
 

@@ -11,13 +11,9 @@ applyTo: "**/pt-techne-*/**"
 - **`pt-techne-misc-workflows`** — Reusable called workflows for common automation (build-and-push, Dependabot, Nuclei)
 - **`pt-techne-opentofu-codespace`** — GitHub Codespace configuration for standardized IaC developer environments
 
-### Creating Releases
+## GitHub Actions
 
-Tags follow [Semantic Versioning](https://semver.org/): `MAJOR.MINOR.PATCH` — increment MAJOR for breaking changes, MINOR for backwards-compatible additions, PATCH for backwards-compatible fixes.
+- All workflow actions must use full 40-character commit SHAs with an inline version comment: `uses: action/name@<sha>  # v1.2.3`
+- When consuming `pt-techne-opentofu-workflows` or `pt-techne-misc-workflows`, always reference by full commit SHA with an inline version comment — never by branch or tag
+- When modifying workflows, update the Mermaid diagram in `README.md` to reflect the changes
 
-To release a new version, simply push a new tag to the repository. The tag should be in the format `vX.Y.Z` where `X`, `Y`, and `Z` are integers.
-
-```none
-git tag vX.Y.Z
-git push origin vX.Y.Z
-```

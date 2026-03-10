@@ -1,5 +1,3 @@
 # pt-techne-ai-context
 
-Team-level Copilot instructions for the Techne team. Loaded via `COPILOT_CUSTOM_INSTRUCTIONS_DIRS` to apply conventions across all `pt-techne-*` repositories.
-
-See `.github/instructions/team.instructions.md` for complete Techne team conventions.
+Techne team-level Copilot instructions loaded via `COPILOT_CUSTOM_INSTRUCTIONS_DIRS`. Contains `team.instructions.md` with techne-specific context for working in the reusable workflow, pre-commit hook, and codespace repositories.
