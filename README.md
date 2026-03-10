@@ -1,4 +1,4 @@
-# Platform Team: Techne AI Context
+# pt-techne-ai-context
 
 Techne team-level Copilot instructions for the [osinfra-io](https://github.com/osinfra-io) platform teams workspace.
 
@@ -16,16 +16,14 @@ Platform   pt-ai-context                   ← universal conventions for all pt-
 
 `.github/instructions/team.instructions.md` — loaded via `COPILOT_CUSTOM_INSTRUCTIONS_DIRS`. Contains conventions shared across all techne repositories:
 
-- Reusable GitHub Actions called workflows for OpenTofu + GCP deployments (`pt-techne-opentofu-workflows`)
-- Pre-commit hooks for IaC validation (`pt-techne-pre-commit-hooks`)
-- Common automation workflows: build-and-push, Dependabot, Nuclei, release (`pt-techne-misc-workflows`)
-- GitHub Codespace for standardized IaC development (`pt-techne-opentofu-codespace`)
-- All GitHub Actions must use full 40-character commit SHAs with inline version comments
-- When modifying workflows, update the Mermaid diagram in `README.md`
+- Reusable called workflows for OpenTofu + GCP deployments and common platform automation
+- All GitHub Actions pinned to full 40-character commit SHAs with inline version comments
+- Consumers of called workflows reference by full commit SHA — never by branch or tag
+- Pre-commit hooks and codespace for standardized IaC development
 
 ## Setup
 
-Add this repo alongside [pt-ai-context](https://github.com/osinfra-io/pt-ai-context) in your `COPILOT_CUSTOM_INSTRUCTIONS_DIRS`:
+Add this repo alongside `pt-ai-context` in your `COPILOT_CUSTOM_INSTRUCTIONS_DIRS`:
 
 ```bash
 # ~/.zshrc or ~/.bashrc

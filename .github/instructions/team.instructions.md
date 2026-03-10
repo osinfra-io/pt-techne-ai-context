@@ -4,16 +4,18 @@ applyTo: "**/pt-techne-*/**"
 
 # Techne Team Instructions
 
-## Repository Overview
-
-- **`pt-techne-opentofu-workflows`** — Reusable GitHub Actions called workflows for OpenTofu + GCP deployments (OIDC auth, state encryption, job summaries, approval gates)
-- **`pt-techne-pre-commit-hooks`** — Pre-commit hooks for IaC validation (`tofu fmt`, `tofu validate`, `tofu test`, docs generation, security scanning)
-- **`pt-techne-misc-workflows`** — Reusable called workflows for common automation (build-and-push, Dependabot, Nuclei)
-- **`pt-techne-opentofu-codespace`** — GitHub Codespace configuration for standardized IaC developer environments
-
 ## GitHub Actions
 
-- All workflow actions must use full 40-character commit SHAs with an inline version comment: `uses: action/name@<sha>  # v1.2.3`
-- When consuming `pt-techne-opentofu-workflows` or `pt-techne-misc-workflows`, always reference by full commit SHA with an inline version comment — never by branch or tag
-- When modifying workflows, update the Mermaid diagram in `README.md` to reflect the changes
+All GitHub Actions must use full 40-character commit SHAs with an inline version comment: `uses: action/name@<sha>  # v1.2.3`
+
+Consumers of `pt-techne-opentofu-workflows` and `pt-techne-misc-workflows` reference called workflows by full commit SHA — never by branch or tag.
+
+When modifying workflows, update the Mermaid diagram in `README.md` to reflect the changes.
+
+## Repository Practices
+
+- `pt-techne-opentofu-workflows` — provides `plan-and-apply.yml` and `test.yml` called workflows; includes test workspaces in `tests/` validated in CI via `sandbox.yml`, `non-production.yml`, and `production.yml`
+- `pt-techne-misc-workflows` — provides `add-to-project.yml`, `build-and-push.yml`, `dependabot.yml`, `nuclei.yml`, and `release.yml` called workflows consumed across all platform repos
+- `pt-techne-pre-commit-hooks` — written in Go; changes require passing `go test ./...`
+- `pt-techne-opentofu-codespace` — GitHub Codespace definition; update `.devcontainer/` when tooling versions change
 
