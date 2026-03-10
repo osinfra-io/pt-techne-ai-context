@@ -18,4 +18,3 @@ When modifying workflows, update the Mermaid diagram in `README.md` to reflect t
 - `pt-techne-misc-workflows` — provides `add-to-project.yml`, `build-and-push.yml`, `dependabot.yml`, `nuclei.yml`, and `release.yml` called workflows consumed across all platform repos
 - `pt-techne-pre-commit-hooks` — written in Go; changes require passing `go test ./...`
 - `pt-techne-opentofu-codespace` — GitHub Codespace definition; update `.devcontainer/` when tooling versions change
-
