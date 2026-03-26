@@ -1,5 +1,5 @@
 ---
-applyTo: "**/pt-techne-*/**"
+applyTo: "**/pt-techne*/**"
 ---
 
 # Techne Team Instructions
