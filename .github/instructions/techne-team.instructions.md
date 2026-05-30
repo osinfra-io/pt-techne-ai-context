@@ -11,6 +11,8 @@ applyTo: "**/pt-techne*/**"
 - **`pt-techne-pre-commit-hooks`** — Custom pre-commit hooks for IaC validation (tofu fmt, tofu validate, documentation generation)
 - **`pt-techne-opentofu-codespace`** — GitHub Codespace definition with pre-installed OpenTofu tooling
 - **`pt-techne-development-setup`** — Development environment setup and configuration
+- **`pt-techne-agents`** — GitHub Copilot agents (the Nomos self-serve platform agent) plus their promptfoo evals
+- **`pt-techne-mcp-server`** — Go MCP server exposing deterministic, typed platform tools (team spec validation/rendering, PR automation) consumed by the agents
 
 ## Shared Tooling Considerations
 
