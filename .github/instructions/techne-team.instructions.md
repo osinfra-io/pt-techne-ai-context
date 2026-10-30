@@ -16,4 +16,4 @@ applyTo: "**/pt-techne*/**"
 
 ## Shared Tooling Considerations
 
-Techne repos provide shared tooling consumed by all other platform teams. Changes can have cross-team impact — all consumers pin to commit SHAs, so releases must be coordinated when breaking changes are introduced.
+Techne repos provide shared tooling consumed by all other platform teams, and consumers pin to commit SHAs. Breaking changes are acceptable when they improve the reference baseline. Update affected consumers to the intended commit and coordinate release sequencing where operationally needed; do not preserve deployed behavior solely for compatibility.
